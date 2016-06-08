@@ -1,0 +1,52 @@
+#######################################################################
+#                                                                     #
+#                     Productivity Organizer                          #
+#                                                                     #
+#######################################################################
+
+Written, design, and developed by Nick Moore
+
+Purpose: To manage multiple projects, courses, chores, etc in a manner
+	 that allows progress on all of the things without letting my
+	 desire to do a million things get in the way.
+
+Usage:
+	org [options]
+
+	When no options are specified
+
+Options:
+
+	-h, --help
+	Outputs the contents of this file.
+
+	-a, --add-track=FILE
+	Adds the track as specified in FILE to the tracklist and
+	exits.  Track segments in FILE are organized in a
+	chronological manner where the first segment to be completed
+	is the first segment in FILE.  Each segment gets its own line.
+	The first line in FILE specifies the name of the track.
+	
+	-g, --get-track-sequence=TRACK
+	Outputs the sequence of segments yet to be assigned in the
+	specified track and exits.
+
+	-l, --list-tracks
+	Outputs the list of tracks and whether they are active and
+	exits.
+
+	-r, --recent-segment
+	Outputs the track and segment most recently assigned, when it
+	was assigned, and whether it was completed or not, and exits.
+
+	-m, --mark-finished=track:segment
+	Marks the specified segment in the specified track as
+	completed, and exits.
+
+	-c, --completed-most-recent
+	Marks the most recently assigned segment as complete and
+	exits.  Same as -mr.
+
+
+
+	
