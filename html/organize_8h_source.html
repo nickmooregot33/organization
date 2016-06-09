@@ -63,20 +63,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00062"></a>00062 
 <a name="l00069"></a><a class="code" href="namespaceOrganize.html#a41290916f312e8cbd4b066c2b4ae2428">00069</a>   const_expr <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#a41290916f312e8cbd4b066c2b4ae2428">COMPLETED_MOST_RECENT</a>()  {<span class="keywordflow">return</span> 64;}
 <a name="l00070"></a>00070 
-<a name="l00074"></a><a class="code" href="namespaceOrganize.html#a5e8ea8eeb1e9223e7aead363eb376b35">00074</a>   <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespaceOrganize.html#a5e8ea8eeb1e9223e7aead363eb376b35">ERROR_STRING</a> = <span class="stringliteral">&quot;ERROR: The return value was: &quot;</span>;    <span class="comment">//error string</span>
-<a name="l00075"></a>00075 
-<a name="l00090"></a>00090   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#afeb0c4e6a374b3110aefcf514c5ba3a2">check_arguments</a>(<span class="keyword">const</span> vector&lt;string&gt; arguments,<span class="keywordtype">string</span>&amp; location );
-<a name="l00091"></a>00091 
-<a name="l00102"></a>00102   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#af1c6e9ca5b5ab07c4854d0ded1393788">execute_arguments</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> arguments, <span class="keywordtype">string</span>&amp; location);
-<a name="l00103"></a>00103 
-<a name="l00114"></a>00114   vector&lt;string&gt; <a class="code" href="namespaceOrganize.html#a56fce7293c32561a676f55669c0a7cfd">extract_arguments</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* array[], <span class="keyword">const</span> <span class="keywordtype">int</span> count);
-<a name="l00115"></a>00115 
-<a name="l00128"></a>00128   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#a1894984dfcd5241084e28c5208d35b26">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);
-<a name="l00129"></a>00129 
-<a name="l00136"></a>00136   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#ad394b953393b39c9107d2a4b72431493">test</a>();
-<a name="l00137"></a>00137 }
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139 <span class="preprocessor">#endif</span>
+<a name="l00079"></a>00079   <span class="keywordtype">int</span> Organize::process_arguments(<span class="keyword">const</span> <span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[]);
+<a name="l00080"></a>00080   
+<a name="l00084"></a><a class="code" href="namespaceOrganize.html#a5e8ea8eeb1e9223e7aead363eb376b35">00084</a>   <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespaceOrganize.html#a5e8ea8eeb1e9223e7aead363eb376b35">ERROR_STRING</a> = <span class="stringliteral">&quot;ERROR: The return value was: &quot;</span>;    <span class="comment">//error string</span>
+<a name="l00085"></a>00085 
+<a name="l00100"></a>00100   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#afeb0c4e6a374b3110aefcf514c5ba3a2">check_arguments</a>(<span class="keyword">const</span> vector&lt;string&gt; arguments,<span class="keywordtype">string</span>&amp; location );
+<a name="l00101"></a>00101 
+<a name="l00112"></a>00112   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#af1c6e9ca5b5ab07c4854d0ded1393788">execute_arguments</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> arguments, <span class="keywordtype">string</span>&amp; location);
+<a name="l00113"></a>00113 
+<a name="l00124"></a>00124   vector&lt;string&gt; <a class="code" href="namespaceOrganize.html#a56fce7293c32561a676f55669c0a7cfd">extract_arguments</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* array[], <span class="keyword">const</span> <span class="keywordtype">int</span> count);
+<a name="l00125"></a>00125 
+<a name="l00138"></a>00138   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#a1894984dfcd5241084e28c5208d35b26">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);
+<a name="l00139"></a>00139 
+<a name="l00146"></a>00146   <span class="keywordtype">int</span> <a class="code" href="namespaceOrganize.html#ad394b953393b39c9107d2a4b72431493">test</a>();
+<a name="l00147"></a>00147 }
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149 <span class="preprocessor">#endif</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
