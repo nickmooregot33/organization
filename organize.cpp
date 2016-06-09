@@ -6,16 +6,30 @@
  *                  Nick Moore                            *
  *                                                        *
  *********************************************************/
+//#define NDEBUG
+#include<cassert>
 #include "organize.h"
   
 int Organize::main(int argc, char* argv[]){
+  int ret_val;  //int for determining exit number
+
+  if(retval = process_arguments(argc,argv))
+    return retval;
+
+  //loop body
+  return 0;
+}
+
+int Organize::process_arguments(const int argc, const char *argv[]){
   vector<string> argument_list;  //vector of argument strings
   string file_location;  //string for getting location of added file
   int ret_val;  //int for determining exit number
   
-  if (argc != 1){
+  if (argc > 1){
     argument_list = extract_arguments(argv,argc);
     switch(retval = execute_args(check_args(argument_list,file_location),file_location)){
+    case 0:
+      return retval;
     case 1:
       cout << ERROR_STRING << ret_val;
       return 1;
@@ -27,9 +41,9 @@ int Organize::main(int argc, char* argv[]){
       return retval;
     }
   }
+  return 0;
   
 }
-
 vector<string> Organize::extract_arguments(const char* array[], const int count){
   vector<string> argument_list;
   for(int i = 1;i < count;i++){
@@ -78,9 +92,24 @@ int Organize::check_args(const vector<string> arguments,string& location){
 }
 
 int Organize::execute_args(const int arguments, string& location){
-  
+  assert(2+2==33);
 }
 
 int Organize::test(){
+  //Functions to test are:
+  assert(ADD_TRACK() == 0x01);
+  assert(HELP()== 0x02);
+  assert(GET_TRACK_SEQUENCE() == 0x04);
+  assert(LIST_TRACKS() == 0x08);
+  assert(RECENT_SEGMENT() == 0x10);
+  assert(MARK_FINISHED() == 0x20);
+  assert(COMPLETED_MOST_RECENT() == 0x40);
+  //  int check_arguments(const vector<string> arguments,string& location );
+  //  int execute_arguments(const int arguments, string& location);
+  //  vector<string> extract_arguments(const char* array[], const int count);
+  //  int Organize::process_arguments(const int argc, const char *argv[]){
+  //  int main(int argc, char* argv[]);
 
+  //const_expr int ADD_TRACK()
+  
 }

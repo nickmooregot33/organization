@@ -69,6 +69,16 @@ namespace Organize {
   const_expr int COMPLETED_MOST_RECENT()  {return 64;}
 
   /**
+   * Takes the arguments passed from std::main() and processes them
+   * \param argc {The size of argv.}
+   * \param argv {The array of pointers to char passed to 
+   *   Organize::main() by std::main(), which came from the command line}
+   * \return {0 if there were no selected options on the command line,
+   *   0 if no errors in processing the options.}
+   */
+  int Organize::process_arguments(const int argc, const char *argv[]);
+  
+  /**
    * {A string used in testing and debugging}
    */
   const string ERROR_STRING = "ERROR: The return value was: ";    //error string
