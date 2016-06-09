@@ -68,6 +68,9 @@ namespace Organize {
    */
   const_expr int COMPLETED_MOST_RECENT()  {return 64;}
 
+  /**
+   * {A string used in testing and debugging}
+   */
   const string ERROR_STRING = "ERROR: The return value was: ";    //error string
 
   /**
@@ -77,7 +80,7 @@ namespace Organize {
    *      arguments into a vector of strings, instead of the usual argc 
    *      and argv arguments.}
    * \param arguments {A vector of strings which hold the argument list 
-   *   from main's argv.}
+   *   from main's argv.  Use extract_arguments() to generate the vector.}
    * \param location {A reference to a string to be modified by 
    *   check_arguments().  This string will hold the location of a file to be 
    *   used for adding a track, if the --add-track or -a switches are used.}
@@ -87,29 +90,48 @@ namespace Organize {
   int check_arguments(const vector<string> arguments,string& location );
 
   /**
-   * 
-   * \param arguments
-   * \param location
-   * \return 
+   * Takes a one-hot bit-vector of command-line options and executes the
+   *   operations associated with them.
+   * \param arguments {One-hot bit-vector of command-line options.  Use
+   *   check_arguments() to generate the bit-vector.}
+   * \param location {Reference to a string holding a file location to
+   *   be used with the -a or --add-track command-line switches.  The string
+   *   is generally loaded by check_arguments().}
+   * \return {0 on success, -1 on error.}
    */
   int execute_arguments(const int arguments, string& location);
 
   /**
-   * \param array[]
-   * \param count
-   * \return 
+   * Takes the usual "main" arguments argc and argv and converts them to
+   *   a vector of strings to be processed by check_arguments().
+   * \param array[] {An array of pointers to char.  Usually just a pointer
+   *   to argv, the argument vector supplied by the Operating System.}
+   * \param count {An int representing the number of pointers to char in
+   *   array.
+   * \return {A vector of strings, each one a copy of the string pointed to 
+   *   by the associated pointer to char in argv.}
    */
   vector<string> extract_arguments(const char* array[], const int count);
 
   /**
-   * \param argc
-   * \param argv[]
-   * \return 
+   * The main application, which will perform all specified operations by 
+   *   the user and will be called by std::main.  For the core functionality 
+   *   requirements, this will consist of only the command-line specified 
+   *   operations, and the rest of the functionality will be developed once 
+   *   the process is schedulable by the operational program.
+   * \param argc {A copy of the argc argument passed to std::main by the 
+   *   operating system.}
+   * \param argv[] {A pointer to the argument vector passed to std::main by
+   *   the operatin system.}
+   * \return {0 on sucess.}
    */
   int main(int argc, char* argv[]);
 
   /**
-   * Test function to do all the unit tests
+   * Test function to do all of the unit tests required.  My lack of 
+   *   experience with unit testing frameworks means this will be developed
+   *   without using frameworks or knowledge of industry standard procedures.
+   *   This subject will be scheduled once the core application is functional.
    */
   int test();
 }

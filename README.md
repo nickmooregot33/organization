@@ -1,5 +1,9 @@
 Project Organizer
 ===
+Documentation
+---
+Doxygen generated HTML is in the HTML folder.
+
 Purpose
 ---
 The purpose of this project is to organize my many different study and project tracks that I personally have going in an effort to promote progress in each different track and prevent any one track from taking over unintentionally.  The general idea is that I will just have all my projects and study lists entered into the organizer, and when I have time to work on something, I just let the organizer tell me what to do.  I'm sure that there are several applications out there that does this, and I know there are several Pomodoro timers, but this is as simple as I need, with room to grow for my own knowledge and skill development.
